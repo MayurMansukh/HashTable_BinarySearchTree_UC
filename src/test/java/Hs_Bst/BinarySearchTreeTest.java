@@ -32,7 +32,7 @@ public class BinarySearchTreeTest {
     public void insert() {
         tree.insert(root, 30);
         tree.insert(root, 70);
-        tree.insert(root, 29);
+        tree.insert(root, 22);
         tree.insert(root, 40);
         tree.insert(root, 90);
         tree.insert(root, 98);
@@ -66,8 +66,19 @@ public class BinarySearchTreeTest {
     @Test
     public void testSize() {
 
+
         Assertions.assertEquals(13, tree.size(root));
         System.out.println("match");
+    }
+    @Test
+    public void testSearch_true() {
+        Assertions.assertEquals(true, tree.search(root, 63));
+        System.out.println("Element found");
+    }
+    @Test
+    public void testSearch_false() {
+        Assertions.assertEquals(false, tree.search(root, 111));
+        System.out.println("Element not found");
     }
 
 }
